@@ -294,8 +294,8 @@ export default {
         cjsj: '2018-01-11'
       }],
       formInline: {
-          user: '',
-          region: ''
+        user: '',
+        region: ''
       }
     }
   },

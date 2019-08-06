@@ -13,7 +13,7 @@
             <el-dropdown-item>个人中心</el-dropdown-item>
             <el-dropdown-item>系统设置</el-dropdown-item>
             <hr color="#ECECEC" style="margin: 5px 0;" size="1">
-            <el-dropdown-item>注销登录</el-dropdown-item>
+            <el-dropdown-item @click="close()">注销登录</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>
@@ -88,6 +88,14 @@ export default {
       if (this.$route.meta.parentPath) {
         this.pagedefault = this.$route.meta.parentPath // 实现路由切换
       }
+    }
+  },
+  methods: {
+    close () {
+      this.$message({
+        message: '注销成功',
+        type: 'success'
+      })
     }
   }
 }

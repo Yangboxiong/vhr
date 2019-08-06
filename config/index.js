@@ -16,6 +16,13 @@ module.exports = {
         pathRewrite: {
           '^/api': '/static'
         }
+      },
+      '/data': {
+        target: 'http://www.jeasyui.com/tutorial/datagrid/datagrid24_getdata.php',
+        changeOrigin: true,
+        pathRewrite:  {
+          '^/data': '/'
+        }
       }
     },
 
