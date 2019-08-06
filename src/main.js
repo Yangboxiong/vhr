@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import 'font-awesome/css/font-awesome.min.css'
 
-Vue.use(ElementUI)
+Vue.use(ElementUI, {size: 'mini'})
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
 

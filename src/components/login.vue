@@ -2,14 +2,14 @@
   <div class="inputBox">
     <div class="title">系统登录</div>
     <div class="input">
-      <el-input v-model="username" placeholder="请输入用户名"></el-input>
-      <el-input v-model="password" placeholder="请输入密码"></el-input>
+      <el-input v-model="username" placeholder="请输入用户名" size="medium"></el-input>
+      <el-input v-model="password" placeholder="请输入密码" size="medium"></el-input>
       <div class="alignCen">
         <template>
           <el-checkbox v-model="checked">记住密码</el-checkbox>
         </template>
       </div>
-      <el-button type="primary" @click="checkLogin()">登录</el-button>
+      <el-button type="primary" @click="checkLogin()" size="medium">登录</el-button>
     </div>
   </div>
 </template>

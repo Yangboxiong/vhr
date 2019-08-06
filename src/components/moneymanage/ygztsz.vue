@@ -7,7 +7,7 @@
         <el-dropdown>
           <div style="display: flex; justify-content: center; align-items: center; color: #fff;">
             系统管理员
-            <img src="../assets/img/64573ce2edc0728.jpg" style="width: 40px; border-radius: 50%; margin-left: 10px;">
+            <img src="../../assets/img/64573ce2edc0728.jpg" style="width: 40px; border-radius: 50%; margin-left: 10px;">
           </div>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>个人中心</el-dropdown-item>
@@ -20,7 +20,7 @@
     </el-header>
     <el-container>
       <el-aside width="200px">
-        <el-menu router>
+        <el-menu router default-opened="3" default-active="ygztsz">
 
           <el-submenu index="1">
             <template slot="title"><i class="fa fa-user-circle-o" style="color: rgb(32, 160, 255); width: 14px; margin-right: 5px;"></i>员工资料</template>
@@ -66,10 +66,12 @@
       </el-aside>
       <el-main>
 
-        <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb separator-class="el-icon-arrow-right" style="margin-bottom: 15px;">
           <el-breadcrumb-item :to="{ path: '/system' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>主页</el-breadcrumb-item>
+          <el-breadcrumb-item>工资账套管理</el-breadcrumb-item>
         </el-breadcrumb>
+
+        <ygzt-table></ygzt-table>
 
       </el-main>
     </el-container>
@@ -77,24 +79,16 @@
 </template>
 
 <script>
+import YgztTable from './components/table2'
 export default {
-  data () {
-    return {
-      pagedefault: ''
-    }
-  },
-  watch: {
-    $route () {
-      if (this.$route.meta.parentPath) {
-        this.pagedefault = this.$route.meta.parentPath // 实现路由切换
-      }
-    }
+  components: {
+    YgztTable: YgztTable
   }
 }
 </script>
 
 <style>
-  @import url("../assets/css/public.css");
+  @import url("../../assets/css/public.css")
 </style>
 
 <style scoped>
@@ -114,7 +108,4 @@ export default {
     background: #ececec;
   }
 
-  .el-breadcrumb {
-    margin-bottom: 30px;
-  }
 </style>
